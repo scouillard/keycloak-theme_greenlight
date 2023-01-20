@@ -594,3 +594,342 @@ ul#kc-totp-supported-apps {
     margin-bottom: 16px;
 }
 /* End Recovery codes */
+
+
+/**************/
+/* GL STYLING */
+/*************/
+body {
+    background: whitesmoke none;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+/*copy from GLv3 default sign in and sign up pages*/
+.vertical-buffer {
+    position: relative;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/******/
+/*Card*/
+/******/
+.gl-card {
+    /*keycloak css default*/
+    margin: 0 auto;
+    max-width: 500px;
+    height: fit-content;
+    width: 100%;
+    max-height: 100%;
+
+    /*bootstrap default*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 8px;
+
+    /*greenlight styling*/
+    border: 0 !important;
+    padding: 1.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 0 0.125rem 0.25rem rgb(33 37 41 / 8%) !important;
+}
+
+/*keycloak css default*/
+@media (max-width: 840px) {
+    .login-pf-page .gl-card{
+        max-width: none;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .login-pf-page .gl-card{
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+    }
+    .gl-card.login-pf-accounts{
+        max-width: none;
+    }
+}
+
+/*********/
+/*Buttons*/
+/*********/
+.gl-btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gl-btn {
+        transition: none;
+    }
+}
+.gl-btn:hover {
+    color: #212529;
+}
+.gl-btn-check:focus + .gl-btn, .gl-btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/*primary button styling*/
+.gl-btn-primary {
+    border: 2px solid silver;
+    background-color: white;
+    color: #363636;
+    font-weight: 600 !important;
+}
+
+.gl-btn-primary:hover {
+    box-shadow: inset 0 0 200px 200px rgba(0, 0, 0, 0.03);
+    color: #363636;
+}
+
+.gl-btn-primary:focus {
+    box-shadow: none;
+}
+
+/*social buttons styling*/
+.gl-btn-social {
+    border: 2px solid silver;
+    background-color: white;
+    color: #363636;
+    font-weight: 600 !important;
+}
+
+.gl-btn-social:hover {
+    box-shadow: inset 0 0 200px 200px rgba(0, 0, 0, 0.03);
+    color: #363636;
+}
+
+#social-google:hover {
+    color: #EA4335 !important;
+}
+
+a:hover .fa-google {
+    color: #EA4335 !important;
+}
+
+#social-microsoft:hover {
+    color: #0177d6 !important;
+}
+
+a:hover .fa-windows {
+    color: #0177d6 !important;
+}
+
+/*************/
+/*Form Layout*/
+/*************/
+.gl-login-signup {
+    margin: 0 !important;
+}
+
+.gl-info-area-wrapper {
+    text-align: center;
+    padding: 0 !important;
+    margin-top: 1rem;
+    background-color: white !important;
+    color: #6c757d;
+}
+
+.gl-login-header {
+    text-align: center;
+}
+
+/*************/
+/*Form Inputs*/
+/*************/
+.gl-form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 8px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .gl-form-control {
+        transition: none;
+    }
+}
+.gl-form-control[type=file] {
+    overflow: hidden;
+}
+.gl-form-control[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+.gl-form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.025rem rgba(13, 110, 253, 0.25);
+}
+.gl-form-control::-webkit-date-and-time-value {
+    height: 1.5em;
+}
+.gl-form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+.gl-form-control:disabled, .gl-form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+.gl-form-control::file-selector-button {
+    padding: 0.375rem 0.75rem;
+    margin: -0.375rem -0.75rem;
+    margin-inline-end: 0.75rem;
+    color: #212529;
+    background-color: #e9ecef;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .gl-form-control::file-selector-button {
+        transition: none;
+    }
+}
+.gl-form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: #dde0e3;
+}
+.gl-form-control::-webkit-file-upload-button {
+    padding: 0.375rem 0.75rem;
+    margin: -0.375rem -0.75rem;
+    margin-inline-end: 0.75rem;
+    color: #212529;
+    background-color: #e9ecef;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .gl-form-control::-webkit-file-upload-button {
+        transition: none;
+    }
+}
+.gl-form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    background-color: #dde0e3;
+}
+
+.gl-form-control-plaintext {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #212529;
+    background-color: transparent;
+    border: solid transparent;
+    border-width: 1px 0;
+}
+.gl-form-control-plaintext.gl-form-control-sm, .gl-form-control-plaintext.gl-form-control-lg {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.gl-form-control-sm {
+    min-height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 8px;
+}
+.gl-form-control-sm::file-selector-button {
+    padding: 0.25rem 0.5rem;
+    margin: -0.25rem -0.5rem;
+    margin-inline-end: 0.5rem;
+}
+.gl-form-control-sm::-webkit-file-upload-button {
+    padding: 0.25rem 0.5rem;
+    margin: -0.25rem -0.5rem;
+    margin-inline-end: 0.5rem;
+}
+
+.gl-form-control-lg {
+    min-height: calc(1.5em + 1rem + 2px);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 10px;
+}
+.gl-form-control-lg::file-selector-button {
+    padding: 0.5rem 1rem;
+    margin: -0.5rem -1rem;
+    margin-inline-end: 1rem;
+}
+.gl-form-control-lg::-webkit-file-upload-button {
+    padding: 0.5rem 1rem;
+    margin: -0.5rem -1rem;
+    margin-inline-end: 1rem;
+}
+
+textarea.gl-form-control {
+    min-height: calc(1.5em + 0.75rem + 2px);
+}
+textarea.gl-form-control-sm {
+    min-height: calc(1.5em + 0.5rem + 2px);
+}
+textarea.gl-form-control-lg {
+    min-height: calc(1.5em + 1rem + 2px);
+}
+
+.gl-form-control-color {
+    width: 3rem;
+    height: auto;
+    padding: 0.375rem;
+}
+.gl-form-control-color:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+.gl-form-control-color::-moz-color-swatch {
+    height: 1.5em;
+    border-radius: 8px;
+}
+.gl-form-control-color::-webkit-color-swatch {
+    height: 1.5em;
+    border-radius: 8px;
+}
